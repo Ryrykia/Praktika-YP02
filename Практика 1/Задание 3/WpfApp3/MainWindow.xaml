@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="769">
+    <Grid Margin="0,0,0,-6">
+        <Button x:Name="generate_butt" Content="Соревнования" HorizontalAlignment="Left" Margin="81,53,0,0" VerticalAlignment="Top" Click="generate_butt_Click"/>
+        <ListBox x:Name="answerList" Margin="27,102,237,171"/>
+    </Grid>
+</Window>
