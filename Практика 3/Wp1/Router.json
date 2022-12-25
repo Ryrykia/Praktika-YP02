@@ -1,0 +1,12 @@
+[
+  {
+    "name":"CSR1000V",
+    "vendor":"Cisco",
+    "type":"virtual"
+  },
+  {
+    "name":"1921",
+    "vendor":"Cisco",
+    "type":"hardware"
+  }
+]
