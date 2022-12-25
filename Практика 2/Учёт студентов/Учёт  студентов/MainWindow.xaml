@@ -1,0 +1,53 @@
+﻿<Window x:Class="Учёт__студентов.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Учёт__студентов"
+        mc:Ignorable="d"
+        Title="Учёт студентов" Height="600" Width="527">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="132*"/>
+            <RowDefinition Height="184*"/>
+            <RowDefinition Height="194*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="239*"/>
+            <ColumnDefinition Width="253*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="list" HorizontalAlignment="Left" Height="112" VerticalAlignment="Top" Width="226" Margin="256,36,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="data" HorizontalAlignment="Left" Height="210" Margin="10,113.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="472" Grid.ColumnSpan="2" Grid.RowSpan="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Age" Binding="{Binding Age}"/>
+                <DataGridTextColumn Header="Group" Binding="{Binding Gruppa}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Введите фамилию" HorizontalAlignment="Left" Margin="10,65,0,0" Grid.Row="3" VerticalAlignment="Top" Height="26" Width="110"/>
+        <Label Content="Введите имя" HorizontalAlignment="Left" Margin="36,65,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="79"/>
+        <Label Content="Введите группу" HorizontalAlignment="Left" Margin="36,117,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="95"/>
+        <Label Content="Введите возраст" HorizontalAlignment="Left" Margin="10,120,0,0" Grid.Row="3" VerticalAlignment="Top" Height="26" Width="100"/>
+        <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="23" Margin="10,89,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="23" Margin="10,143,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt3" HorizontalAlignment="Left" Height="23" Margin="36,89,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txt4" HorizontalAlignment="Left" Height="23" Margin="36,138,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button Content="Добавить" Name="btn3" Grid.Column="1" HorizontalAlignment="Left" Margin="168,99,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Height="39" Click="Btn3_Click" Visibility="Hidden"/>
+        <Button Content="Удалить" Name="btn1" Margin="168,99,9.6,0" Grid.Row="3" VerticalAlignment="Top" Height="39" Click="Btn1_Click" Grid.Column="1" Visibility="Hidden"/>
+        <Button Content="Изменить" Name="btn" Margin="169,99,0,0" Grid.Row="3" VerticalAlignment="Top" Height="39" Click="Btn_Click" HorizontalAlignment="Left" Width="75" Grid.Column="1" Visibility="Hidden"/>
+        <Label Content="Выберите группу" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Width="109"/>
+        <ComboBox x:Name="combo" HorizontalAlignment="Left" Margin="46,36,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="ИСиП-301" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="ИСиП-302" HorizontalAlignment="Left" Width="118.4"/>
+            <ComboBoxItem Content="ТМ-201" HorizontalAlignment="Left" Width="118.4"/>
+        </ComboBox>
+        <Label Content="Список группы" Grid.Column="1" HorizontalAlignment="Left" Margin="86,10,0,0" VerticalAlignment="Top"/>
+        <TabControl HorizontalAlignment="Left" Height="41" Margin="0,24,0,0" Grid.Row="3" VerticalAlignment="Top" Width="500" Grid.ColumnSpan="2">
+            <TabItem x:Name="tab1" Header="Удалить студента" Margin="137,0,-164,-2" GotFocus="Tab1_GotFocus" />
+            <TabItem x:Name="tab2" Header="Изменить данные" Margin="164,0,-170,-2" GotFocus="Tab2_GotFocus" />
+            <TabItem x:Name="tab3" Header="Добавить студента" Margin="-221,0,193,-2" GotFocus="Tab3_GotFocus" />
+        </TabControl>
+    </Grid>
+</Window>
